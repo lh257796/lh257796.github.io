@@ -14,9 +14,19 @@
 
 <p><a href="html-hello-world.html">Cheatsheet for HTML</a></p>
 <p><a href="fakeform.html">-forms-</a></p>
-<script src="script.js"></script>
 
-<button onclick="">Look I'm a button! Who knows where I go???</button>
 
+<button onClick="newFunction()">Look I'm a button! Who knows where I go???</button>
+
+<p id="demo"></p>
+
+<script src="script.js">
+    function newFunction() {
+        let person=prompt("what's your name?", "Homo Sapien");
+        if (person!==null) {
+            document.getElementById("demo").innerHTML=`Hello ${person}! Nice to meet you!`
+        }
+    }
+</script>
 </body>
 </html>
