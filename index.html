@@ -17,8 +17,12 @@
 
 
 <button onClick="newFunction()">Look I'm a button! Who what I do???</button>
+<br>
+
+<button onClick="secondFunction()">Important Survey Question</button>
 
 <p id="demo"></p>
+<p id="test"></p>
 
 
 <script>
@@ -26,6 +30,15 @@
         let person=prompt("what's your name?", "Homo Sapien");
         if (person!==null) {
             document.getElementById("demo").innerHTML=`Hello ${person}! Nice to meet you!`
+        }
+    }
+    function secondFunction() {
+        let person2=prompt("Do you enjoy buttons?", "Yes/No");
+        if (person2==='Yes' || person2==='yes') {
+            document.getElementById("test").innerHTML=`Glad to meet another fellow button lover!`
+
+        } else {
+            document.getElementById("test").innerHTML=`We have nothing left to talk about.`
         }
     }
 </script>
