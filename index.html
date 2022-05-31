@@ -28,6 +28,9 @@
 
 <p id="test"></p>
 
+<button onClick="secondFunction()">Important Survey Question</button>
+
+<p id="crest"></p>
 
 <script>
     function newFunction() {
@@ -43,6 +46,15 @@
 
         } else {
             document.getElementById("test").innerHTML=`We have nothing left to talk about.`
+        }
+    }
+    function thirdFunction() {
+        let person2=prompt("Do you hate unsolicited questionnaires?", "Yes/No");
+        if (person2==='Yes' || person2==='yes') {
+            document.getElementById("crest").innerHTML=`So do I! We're incredibly alike!`
+
+        } else {
+            document.getElementById("crest").innerHTML=`Sorry to disappoint you but that was the last one.`
         }
     }
 </script>
