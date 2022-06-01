@@ -1,0 +1,28 @@
+function organizeItems(items) {
+    //in items, iterate each individual object
+    //in each object, if category not included add it
+    //if category is included, add new property
+    let result={};
+  for (let i=0; i<items.length; i++) {
+    let object=items[i];
+    for (let key in object) {
+      if (!([object[key]] in result)) {
+        result[object[key]]=[];
+      }
+
+
+    }
+  } return result;
+
+}
+
+var itemData = [
+    { category: 'fruit',  itemName: 'apple', onSale: false },
+    { category: 'canned', itemName: 'beans', onSale: false },
+    { category: 'canned', itemName: 'corn',  onSale: true  },
+    { category: 'frozen', itemName: 'pizza', onSale: false },
+    { category: 'fruit',  itemName: 'melon', onSale: true  },
+    { category: 'canned', itemName: 'soup',  onSale: false },
+  ];
+let a=organizeItems(itemData);
+  console.log(a);
