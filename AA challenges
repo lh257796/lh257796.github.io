@@ -1,0 +1,39 @@
+function translate(string) {
+    let newstr='';
+    let vowels='aeiou';
+    for (let i=0; i<string.length; i++) {
+        let char=string[i];
+        if (vowels.includes(char)) {
+            newstr=newstr.concat(char);
+            newstr=newstr.concat('b');
+            newstr=newstr.concat(char);
+        } else {
+            newstr=newstr.concat(char);
+        }
+    }
+    return newstr;
+}
+
+
+function adjacent_sum(arr) {
+    let newarr=[];
+    for (let i=0; i<arr.length-1; i++) {
+        let current=arr[i];
+        newarr.push(current+arr[i+1]);
+    } return newarr;
+}
+
+
+function combinations(arr) {
+    let newarr=[];
+    for (let i=0; i<arr.length; i++) {
+        let subarr=[];
+        subarr.push(arr[i]);
+        for (let i=1; i<arr.length; i++) {
+            subarr.push(arr[i])
+        } newarr.push(subarr);
+    } return newarr;
+}
+
+let a=combinations(["a", "b", "c"]);
+console.log(a);
