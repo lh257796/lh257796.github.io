@@ -34,5 +34,5 @@ app.post('/', (req, res) => {
     })
 })
 app.listen(PORT, () => {
-    console.log(`server runningo n port: ${PORT}`)
+    console.log(`server running on port: ${PORT}`)
 })
