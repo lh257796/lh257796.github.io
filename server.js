@@ -1,16 +1,13 @@
 const express = require('express')
 const nodemailer = require('nodemailer')
 const app = express();
-
 const PORT = process.env.PORT || 3000
-
 app.use(express.static('public'))
 app.use(express.json())
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
-
 app.post('/', (req, res) => {
     console.log(req.body)
     const transporter = nodemailer.createTransport({
@@ -26,7 +23,6 @@ app.post('/', (req, res) => {
         subject: `Message from Portfolio: ${req.body.subject}`,
         text: req.body.message
     }
-
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log(error);
@@ -37,7 +33,6 @@ app.post('/', (req, res) => {
         }
     })
 })
-
 app.listen(PORT, () => {
     console.log(`server runningo n port: ${PORT}`)
 })
