@@ -15,7 +15,7 @@
   */
   /* --first-hue: 2; */
   /* --first-hue: 200; */
-  --first-hue: 39;
+  --first-hue: 145;
 
 
   --sat: 66%;
@@ -495,7 +495,8 @@ body.light-theme{
 }
 
 .about__img{
-    width: 275px;
+    width: 240;
+    height: auto;
     border-radius: 1.5rem;
     justify-self: center;
 }
