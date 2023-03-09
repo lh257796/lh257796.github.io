@@ -94,42 +94,73 @@ function activeWork(){
 linkWork.forEach(l=> l.addEventListener('click', activeWork))
 
 /*=============== CONTACT FORM SUBMITION ===============*/
-const contactForm = document.querySelector('.contact__form')
 
-let fullname = document.getElementById('fullname')
-let email = document.getElementById('email')
-let subject = document.getElementById('subject')
-let message = document.getElementById('message')
+//deprecated
+
+// const contactForm = document.querySelector('.contact__form')
+
+// let fullname = document.getElementById('fullname')
+// let email = document.getElementById('email')
+// let subject = document.getElementById('subject')
+// let message = document.getElementById('message')
+
+// contactForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     let formData = {
+//         fullname: fullname.value,
+//         email: email.value,
+//         subject: subject.value,
+//         message: message.value
+//     }
+
+//     let xhr = new XMLHttpRequest();
+//     xhr.open('POST', 'https://lh257796.github.io/');
+//     xhr.setRequestHeader('content-type', 'application/json');
+//     xhr.onload = function(){
+//         console.log(xhr.responseText)
+//         if (xhr.responseText == 'success') {
+//             alert('Email sent');
+//             fullname.value = ''
+//             email.value = ''
+//             subject.value = ''
+//             message.value = ''
+//         } else {
+//             alert('This feature is currently in dev. Please use the contact info on the left!')
+//         }
+//     }
+
+//     xhr.send(JSON.stringify(formData));
+
+// });
+
+const contactForm = document.querySelector('.contact__form')
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let formData = {
-        fullname: fullname.value,
-        email: email.value,
-        subject: subject.value,
-        message: message.value
-    }
+    const formData = new FormData(contactForm);
 
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://lh257796.github.io/');
-    xhr.setRequestHeader('content-type', 'application/json');
-    xhr.onload = function(){
-        console.log(xhr.responseText)
-        if (xhr.responseText == 'success') {
+    fetch(contactForm.action, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json'
+        },
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
             alert('Email sent');
             fullname.value = ''
             email.value = ''
             subject.value = ''
             message.value = ''
         } else {
-            alert('This feature is currently in dev. Please use the contact info on the left!')
+            alert('Error sending email');
         }
-    }
-
-    xhr.send(JSON.stringify(formData));
-
+    });
 });
+
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
