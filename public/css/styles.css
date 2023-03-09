@@ -15,12 +15,12 @@
   */
   /* --first-hue: 2; */
   /* --first-hue: 200; */
-  --first-hue: 120;
+  --first-hue: 270;
 
   --sat: 66%;
   --lig: 75%;
   /* --second-hue: 219; */
-  --second-hue: 300;
+  --second-hue: 150;
 
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
