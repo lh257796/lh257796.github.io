@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" property="og:title" content="My Portfolio" />
-    <meta name="image" property="og:image" content="https://lh257796.github.io/OnePagePortfolio/public/img/Portfolio.png">
+    <meta
+      name="image"
+      property="og:image"
+      content="https://lh257796.github.io/OnePagePortfolio/public/img/Portfolio.png"
+    />
     <meta
       name="description"
       property="og:description"
@@ -47,7 +51,6 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
     <!-- <link rel="stylesheet" href="public/css/styles.css" /> -->
     <link rel="stylesheet" href="public/css/styles.css" />
-
 
     <title>Hi, I'm Han</title>
   </head>
@@ -634,18 +637,14 @@
 
         <div class="work__container container grid">
           <div class="work__card">
-            <img src="public/img/Portfolio.png" alt="" class="work__img"/>
+            <img src="public/img/Portfolio.png" alt="" class="work__img" />
             <h3 class="work__title">My Portfolio</h3>
             <a href="#" class="work__button">
               Scroll to Top <i class="bx bx-right-arrow-alt work__icon"></i>
             </a>
           </div>
           <div class="work__card mix react">
-            <img
-              src="public/img/Goji.png"
-              alt="Goji logo"
-              class="work__img"
-            />
+            <img src="public/img/Goji.png" alt="Goji logo" class="work__img" />
             <h3 class="work__title">Goji: A Dog-Walking App (2022)</h3>
             <a
               href="http://goji-rnfn.onrender.com/"
@@ -716,10 +715,16 @@
 
           <div class="contact__content">
             <h3 class="contact__title">Ask me a question or reach out!</h3>
-            <form class="contact__form">
+
+            <form
+              class="contact__form"
+              action="https://formspree.io/f/xjvdokab"
+              method="POST"
+            >
               <div class="contact__form-div">
                 <label for="" class="contact__form-tag">Name</label>
                 <input
+                  name="name"
                   type="text"
                   placeholder="Insert your name"
                   class="contact__form-input"
@@ -729,6 +734,7 @@
               <div class="contact__form-div">
                 <label for="" class="contact__form-tag">Email</label>
                 <input
+                  name="email"
                   type="email"
                   placeholder="Insert your email address"
                   class="contact__form-input"
@@ -738,6 +744,7 @@
               <div class="contact__form-div">
                 <label for="" class="contact__form-tag">Subject</label>
                 <input
+                  name="subject"
                   type="text"
                   placeholder="Insert your subject"
                   class="contact__form-input"
@@ -747,7 +754,7 @@
               <div class="contact__form-div contact__form-area">
                 <label for="" class="contact__form-tag">Questions</label>
                 <textarea
-                  name=""
+                  name="questions"
                   id="message"
                   cols="30"
                   rows="10"
@@ -759,7 +766,6 @@
               <input type="submit" value="Send Message" class="button" />
             </form>
           </div>
-
         </div>
       </section>
     </main>
@@ -813,7 +819,6 @@
     <!--=============== SCROLLREVEAL ===============-->
     <!-- <script src="js/scrollreveal.min.js"></script> -->
     <script src="public/js/scrollreveal.min.js"></script>
-
 
     <!--=============== MIXITUP FILTER ===============-->
     <script src="public/js/mixitup.min.js"></script>
