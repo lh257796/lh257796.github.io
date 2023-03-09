@@ -134,33 +134,32 @@ linkWork.forEach(l=> l.addEventListener('click', activeWork))
 
 // });
 
+//WHAT IF THERE IS NO LOGIC???
 
-const contactForm = document.querySelector('.contact__form')
+// const contactForm = document.querySelector('.contact__form')
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(contactForm);
-
-    fetch(contactForm.action, {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json'
-        },
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Email sent');
-            fullname.value = ''
-            email.value = ''
-            subject.value = ''
-            message.value = ''
-        } else {
-            alert('Error sending email');
-        }
-    });
-});
+// contactForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const formData = new FormData(contactForm);
+//     fetch(contactForm.action, {
+//         method: 'POST',
+//         headers: {
+//             'Accept': 'application/json'
+//         },
+//         body: formData
+//     })
+//     .then(response => {
+//         if (response.ok) {
+//             alert('Email sent');
+//             fullname.value = ''
+//             email.value = ''
+//             subject.value = ''
+//             message.value = ''
+//         } else {
+//             alert('Error sending email');
+//         }
+//     });
+// });
 
 
 
