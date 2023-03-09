@@ -19,8 +19,8 @@ app.post('/', (req, res) => {
         service: 'gmail',
         auth: {
             user: 'han.lu.122@gmail.com',
-            pass: 'EFK4ypv0wvw.bra.qfm'
-            // pass: 'gkvbzvtrffdznrnc',
+            pass: 'Congrats, you found a potential security leak. Claim your prize by sending me an email!'
+
         }
     })
     const mailOptions = {
