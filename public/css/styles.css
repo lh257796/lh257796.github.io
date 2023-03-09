@@ -702,8 +702,8 @@ body.light-theme{
 .work__img{
     border-radius: 1rem;
     margin-bottom: .75rem;
-    width: 144px;
     height: 144px;
+    width: auto;
 }
 
 .work__title{
