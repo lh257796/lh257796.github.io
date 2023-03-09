@@ -134,6 +134,7 @@ linkWork.forEach(l=> l.addEventListener('click', activeWork))
 
 // });
 
+
 const contactForm = document.querySelector('.contact__form')
 
 contactForm.addEventListener('submit', (e) => {
