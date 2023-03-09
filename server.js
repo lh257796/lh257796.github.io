@@ -15,8 +15,8 @@ app.post('/', (req, res) => {
         service: 'gmail',
         auth: {
             user: 'han.lu.122@gmail.com',
-            // pass: 'EFK4ypv0wvw.bra.qfm'
-            pass: 'gkvbzvtrffdznrnc',
+            pass: 'EFK4ypv0wvw.bra.qfm'
+            // pass: 'gkvbzvtrffdznrnc',
         }
     })
     const mailOptions = {
