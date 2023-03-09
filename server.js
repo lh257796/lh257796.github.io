@@ -5,16 +5,18 @@ const PORT = process.env.PORT || 3000
 app.use(express.static('public'))
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-})
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname + '/index.html')
+// })
+
 app.post('/', (req, res) => {
     console.log(req.body)
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: 'han.lu.122@gmail.com',
-            pass: 'EFK4ypv0wvw.bra.qfm'
+            // pass: 'EFK4ypv0wvw.bra.qfm'
+            pass: 'gkvbzvtrffdznrnc',
         }
     })
     const mailOptions = {
